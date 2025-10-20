@@ -1,0 +1,13 @@
+---
+- name: Setup servers with Docker
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    - name: Install Docker
+      apt:
+        name: docker-ce
+        state: present
+        update_cache: yes

@@ -1,0 +1,30 @@
+---
+- name: Deploy application
+  hosts: web_servers
+  become: true 
+  tasks:
+    - name: Pull Docker image from Docker Hub
+      docker_image:
+        name: asomaaroufiniyaa/todo-app-api:latest
+        source: pull
+
+    - name: Copy docker-compose file to server
+      copy:
+        src: ../../app/docker-compose.yml
+        dest: /home/ubuntu/docker-compose.yml
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'
+
+    - name: Run docker-compose to start containers
+      command: docker-compose -f /home/ubuntu/docker-compose.yml up -d
+      args:
+        chdir: /home/ubuntu
+
+    - name: Ensure containers are running
+      docker_compose:
+        project_src: /home/ubuntu
+        files:
+          - docker-compose.yml
+        state: present
+        restarted: true
