@@ -11,4 +11,9 @@
       apt:
         name: docker.io
         state: present
+
+    - name: Install Docker Compose v2 plugin
+      apt:
+        name: docker-compose-plugin
+        state: present
         update_cache: yes
