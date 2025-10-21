@@ -32,8 +32,8 @@ jobs:
       - name: Setup SSH Key for Ansible
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy-key.pem
-          chmod 600 ~/.ssh/deploy-key.pem
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
 
       - name: Setup Ansible
         run: |
