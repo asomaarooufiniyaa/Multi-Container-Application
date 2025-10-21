@@ -192,4 +192,4 @@ DevOps & Cloud Engineer
 ## 🧠 Inspiration
 
 > “Automation isn’t about replacing humans —
-> it’s about freeing them to focus on creation.”
+> it’s about freeing them to focus on creation”
