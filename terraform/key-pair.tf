@@ -4,4 +4,5 @@ resource "aws_key_pair" "main_key" {
 
   lifecycle {
     prevent_destroy = true
+  }
 }
