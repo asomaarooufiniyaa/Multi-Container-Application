@@ -4,7 +4,7 @@
   become: true 
   tasks:
     - name: Pull Docker image from Docker Hub
-      docker_image:
+      community.docker.docker_image:
         name: asomaaroufiniyaa/todo-app-api:latest
         source: pull
 
@@ -16,13 +16,8 @@
         group: ubuntu
         mode: '0644'
 
-    - name: Run docker-compose to start containers
-      command: docker-compose -f /home/ubuntu/docker-compose.yml up -d
-      args:
-        chdir: /home/ubuntu
-
-    - name: Ensure containers are running
-      docker_compose:
+    - name: Run docker-compose v2 to start containers
+      community.docker.docker_compose_v2:
         project_src: /home/ubuntu
         files:
           - docker-compose.yml
