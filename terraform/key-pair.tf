@@ -1,5 +1,5 @@
 resource "aws_key_pair" "main_key" {
-  key_name   = "main_key_uniqueee"
+  key_name   = "main_keyy"
   public_key = file("${path.module}/keys/id_ed25519.pub")
 
   lifecycle {
