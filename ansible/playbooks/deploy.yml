@@ -22,4 +22,5 @@
         files:
           - docker-compose.yml
         state: present
-        restarted: true
+        recreate: true  
+        pull: yes
