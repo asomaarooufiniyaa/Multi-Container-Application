@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/todo_db', {
 .catch(err => console.error('❌ MongoDB connection error:', err));
 
 app.get('/', (req, res) => {
-  res.send('Todo API is running ✅. Use /todos to get your todos.');
+  res.send('Todo API is running guys dont worry ✅. Use /todos to get your todos.');
 });
 app.get('/todos', async (req, res) => {
   try {
