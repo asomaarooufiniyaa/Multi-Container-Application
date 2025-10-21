@@ -23,4 +23,4 @@
           - docker-compose.yml
         state: present
         recreate: true  
-        pull: yes
+        pull: always
