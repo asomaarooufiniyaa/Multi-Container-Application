@@ -8,6 +8,6 @@
         update_cache: yes
     - name: Install Docker
       apt:
-        name: docker-ce
-        state: present
-        update_cache: yes
+      name: docker.io
+      state: present
+      update_cache: yes
