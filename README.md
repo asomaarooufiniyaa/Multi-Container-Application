@@ -185,7 +185,7 @@ http {
 
 **Aso maarooufiniyaa**
 DevOps & Cloud Engineer 
-🌐 [LinkedIn](https://linkedin.com/in/asomaarooufiniyaa) | [GitHub](https://github.com/asomaarooufiniyaa)
+🌐 [LinkedIn](https://www.linkedin.com/feed/) | [GitHub](https://github.com/asomaarooufiniyaa)
 
 ---
 
